@@ -1,0 +1,10 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="BlockStatementJS" enabled="true" level="SERVER PROBLEM" enabled_by_default="true" />
+    <inspection_tool class="IncrementDecrementResultUsedJS" enabled="true" level="SERVER PROBLEM" enabled_by_default="true" />
+    <inspection_tool class="MagicNumberJS" enabled="true" level="SERVER PROBLEM" enabled_by_default="true" />
+    <inspection_tool class="NegatedConditionalExpressionJS" enabled="true" level="SERVER PROBLEM" enabled_by_default="true" />
+    <inspection_tool class="NegatedIfStatementJS" enabled="true" level="SERVER PROBLEM" enabled_by_default="true" />
+  </profile>
+</component>

@@ -1,0 +1,244 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Python</title>
+    <meta name="description" content=""/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="shortcut icon" href="{% static 'static/images/favicon.ico' %}">
+    <link rel="stylesheet" href="{% static 'static/libs/bootstrap/css/bootstrap.css' %}"/>
+    <link rel="stylesheet" href="{% static 'static/libs/font-awesome-4.2.0/css/font-awesome.min.css'  %}"/>
+    <link rel="stylesheet" href="{% static 'static/libs/fancybox/jquery.fancybox.css' %}"/>
+    <link rel="stylesheet" href="{% static 'static/libs/owl-carousel/owl.carousel.css'  %}"/>
+    <link rel="stylesheet" href="{% static 'static/libs/countdown/jquery.countdown.css'  %}"/>
+    <link rel="stylesheet" href="{% static 'static/css/fonts.css' %}"/>
+    <link rel="stylesheet" href="{% static 'static/css/main.css' %}"/>
+    <link rel="stylesheet" href="{% static 'static/css/media.css' %}"/>
+</head>
+<body>
+<header class="top_header">
+    <div class="header_topline">
+        <div class="container">
+            <div class="col-md-12">
+                <div class="row">
+                    <button class="auth_buttons hidden-md hidden-lg hidden-sm"><i class="fa fa-user"></i></button>
+                    <div class="top_links">
+                        <a href="#">Про проект</a>
+                        <a href="#">Контакти</a>
+                    </div>
+                    <div class="soc_buttons">
+                        <a href="#"><i class="fa fa-vk"></i></a>
+                        <a href="#"><i class="fa fa-skype"></i></a>
+                        <a href="#"><i class="fa fa-git-square"></i></a>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="cotainer">
+        <div class="col-md-12">
+            <div class="row">
+                <a href="#" class="logo"><img class="logo_img" src="{% static 'static/images/logo.png' %}"></a>
+                <nav class="main_menu clearfix">
+                    <button class="main_menu_button hidden-md hidden-lg">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <ul>
+                        <li><a href="/">Python</a></li>
+                        <li><a href="#">Уроки</a></li>
+                        <li><a href="#">Візуалізатор</a></li>
+                        <li><a href="#">Кабінет</a></li>
+                         {% if username %}
+                        <li><a href="/auth/logout/">Вийти {{ username }}</a></li>
+                        {% else %}
+                        <li><a href="/auth/login/">Ввійти</a></li>
+                        {% endif %}
+
+                    </ul>
+                    <div class="top_contacts"><i class="fa fa-mobile fa-fw fa-lg"></i>0-800-504-30-24</div>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<section id="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="slider_container">
+                    <div class="next_button"><i class="fa fa-chevron-right"></i></div>
+                    <div class="carousel">
+                        <div class="slider_item">
+                            <img src="{% static 'static/images/bg1.jpg' %}" alt>
+
+                            <div class="main-header">
+                                <h1>Навчальний ресурс з вивчення мови програмування Python</h1>
+                            </div>
+                        </div>
+                        <div class="slider_item"><img src="{% static 'static/images/bg2.jpg' %}" alt></div>
+                        <div class="slider_item"><img src="{% static 'static/images/bg3.jpg' %}" alt></div>
+                    </div>
+
+                </div>
+                <div class="prev_button"><i class="fa fa-chevron-left"></i></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% block article %} {% endblock %}
+<section id="benefits" class="benefits">
+    <div class="benefits-about">
+        <div class="container">
+            <div class="row header">
+                <h3>Переваги</h3>
+
+                <p>Навчатися - ніколи не пізно.</p>
+            </div>
+            <div class="row ">
+                <div class="col-md-3">
+                    <div class="section">
+                        <div class="pic">
+                            <img src="{% static 'static/images/read.png' %}" alt="read" class="img-responsive"/>
+                        </div>
+                        <div class="info">
+                            <strong>Читай!</strong>
+
+                            <p>
+                                Ресурс має власну бібліотеку, що надає можливість читати необхідну літературу як онлайн,
+                                так і завантаживши її на власний ПК.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="section">
+                        <div class="pic">
+                            <img src="{% static 'static/images/write.png' %}" alt="write" class="img-responsive"/>
+                        </div>
+                        <div class="info">
+                            <strong>Занотовуй!</strong>
+
+                            <p>Оскільки ресурси нашої пам'яті не безмежні, для кращого засвоювання матеріалу,
+                                рекомендовано робити нотатки будь-яким зручним для тебе способом.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="section">
+                        <div class="pic">
+                            <img src="{% static 'static/images/do-code.png' %}" alt="coding" class="img-responsive"/>
+                        </div>
+                        <div class="info">
+                            <strong>Практикуй!</strong>
+
+                            <p>Основним завданням ресурсу є застосування на практиці теоретичних навичків, програмування
+                                в онлайн режимі.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="section">
+                        <div class="pic">
+                            <img src="{% static 'static/images/and.png' %}" alt="study" class="img-responsive"/>
+                        </div>
+                        <div class="info">
+                            <strong>Фінішуй!</strong>
+
+                            <p>По закінченню курсу ти можеш сміливо програмувати, та навіть знайти роботу, оскільки
+                                отриманих знань достатньо для швидкого старту твоєї кар'єри.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+</section>
+<section>
+    <div class="some-info">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-3 col-md-6">
+                    <div class="about-python">
+                        <h4>Phyton</h4>
+                        <h6>рекомендоване прочитання — «Па́йтон»</h6>
+
+                        <p> Iнтерпретована об'єктно-орієнтована мова програмування високого рівня з динамічною
+                            семантикою.
+
+                        <p> Розроблена в 1990 році Гвідо ван Россумом.</p>
+
+                        <p>Структури даних високого рівня разом із динамічною
+                            семантикою та динамічним зв'язуванням роблять її привабливою для швидкої розробки програм,
+                            а також як засіб поєднання існуючих компонентів.</p>
+
+                        <p> Python підтримує модулі та пакети модулів,
+                            що сприяє модульності та повторному використанню коду. </p>
+
+                        <p>Інтерпретатор Python та стандартні
+                            бібліотеки доступні як у скомпільованій так і у вихідній формі на всіх основних платформах.
+                        </p>
+
+                        <p>
+                            В мові програмування Python підтримується декілька парадигм програмування, зокрема:
+                            об'єктно-орієнтована, процедурна, функціональна та аспектно-орієнтована.</p>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="main_footer bg_dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                &copy; 2015 Олена Кірічок
+                <div class="social_wrap">
+                    <ul>
+                        <li><a href="#" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fa fa-vk"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#" target="_blank"><i class="fa fa-github"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="hidden"></div>
+<!--[if lt IE 9]>
+<script src="{% static 'static/libs/html5shiv/es5-shim.min.js' %}"></script>
+<script src="{% static 'static/libs/html5shiv/html5shiv.min.js' %}"></script>
+<script src="{% static 'static/libs/html5shiv/html5shiv-printshiv.min.js' %}"></script>
+<script src="{% static 'static/libs/respond/respond.min.js' %}"></script>
+<![endif]-->
+<script src="{% static 'static/libs/jquery/jquery-1.11.1.min.js' %}"></script>
+<script src="{% static 'static/js/common.js' %}"></script>
+<script src="{% static 'static/libs/parallax.js-1.3.1/parallax.js' %}"></script>
+<script src="{% static 'static/libs/bootstrap/js/bootstrap.js' %}"></script>
+<script src="{% static 'static/libs/jquery-mousewheel/jquery.mousewheel.min.js' %}"></script>
+<script src="{% static 'static/libs/fancybox/jquery.fancybox.pack.js' %}"></script>
+<script src="{% static 'static/libs/waypoints/waypoints-1.6.2.min.js' %}"></script>
+<script src="{% static 'static/libs/scrollto/jquery.scrollTo.min.js' %}"></script>
+<script src="{% static 'static/libs/owl-carousel/owl.carousel.min.js' %}"></script>
+<script src="{% static 'static/libs/countdown/jquery.plugin.js' %}"></script>
+<script src="{% static 'static/libs/countdown/jquery.countdown.min.js' %}"></script>
+<script src="{% static 'static/libs/countdown/jquery.countdown-ru.js' %}"></script>
+<script src="{% static 'static/libs/landing-nav/navigation.js' %}"></script>
+
+
+<!-- Yandex.Metrika counter --><!-- /Yandex.Metrika counter -->
+<!-- Google Analytics counter --><!-- /Google Analytics counter -->
+</body>
+</html>
