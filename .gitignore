@@ -78,6 +78,7 @@ target/
 pyvenv.cfg
 pip-selfcheck.json
 
+.idea
 
 =======
 >>>>>>> 71a7e4ebdbdda40da481c1fe58ad5c50f7d6d5ef
